@@ -65,4 +65,5 @@ rails db:migrate VERSION=0
 ```
 
 # エラー
-- `rails test`をするとなぜか`/Users/takumi-hiraoka/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/bootsnap-1.7.7/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:34:in 'require': cannot load such file -- rexml/document (LoadError)`というようなエラーが出る。
+- `rails test`をするとなぜか`/Users/takumi-hiraoka/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/bootsnap-1.7.7/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:34:in 'require': cannot load such file -- rexml/document (LoadError)`というようなエラーが出る。  
+このエラーがあったので、最後の方のguardfileの設定は行ってない。
