@@ -39,3 +39,13 @@ $ rails server
 
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
 を参考にしてください。
+
+# 注意点
+- heroku-appの削除
+```
+# herokuappの一覧
+heroku apps
+
+# herokuappの削除
+heroku apps:destroy -a=myproject
+```
