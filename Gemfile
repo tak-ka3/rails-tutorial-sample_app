@@ -42,7 +42,8 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '2.1.1'
+  gem 'spring-watcher-listen', '2.0.1'
 end
 
 group :test do
@@ -56,6 +57,7 @@ group :test do
   gem 'minitest-reporters',       '1.4.3'
   gem 'guard',                    '2.18.0'
   gem 'guard-minitest',           '2.4.6'
+  # gem 'spring', '2.1.1'
 end
 
 group :production do

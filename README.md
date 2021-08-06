@@ -49,3 +49,20 @@ heroku apps
 # herokuappの削除
 heroku apps:destroy -a=myproject
 ```
+
+- 間違えた時の戻し方
+```
+rails generate controller StaticPages home help
+rails destroy controller StaticPages home help
+
+rails generate model User name:string email:string
+rails destroy model User
+
+rails db:migrate
+rails db:rollback
+# 一番最初に戻したい時
+rails db:migrate VERSION=0
+```
+
+# エラー
+- `rails test`をするとなぜか`/Users/takumi-hiraoka/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/bootsnap-1.7.7/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:34:in 'require': cannot load such file -- rexml/document (LoadError)`というようなエラーが出る。
