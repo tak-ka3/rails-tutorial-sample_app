@@ -64,6 +64,13 @@ rails db:rollback
 rails db:migrate VERSION=0
 ```
 
+- stylesheets
+`app/assets/stylesheets`のディレクトリの中に置かれたスタイルシートは`application.css`の一部としてwebサイトのレイアウトに読み込まれる。
+
 # エラー
 - `rails test`をするとなぜか`/Users/takumi-hiraoka/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/bootsnap-1.7.7/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:34:in 'require': cannot load such file -- rexml/document (LoadError)`というようなエラーが出る。  
 このエラーがあったので、最後の方のguardfileの設定は行ってない。
+
+- `<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>`を`views/layout/application.html.erb`に入れるとエラーが出る
+- `gem 'bootstrap', '~> 5.0.1'`だとエラーが出るので、教科書通り`gem bootstrap-sass`と書いた方が良い
+- `<% provide(:title, "Sign up")%>`は`provide`と`(:title)`の間の空白を開けてはいけない
