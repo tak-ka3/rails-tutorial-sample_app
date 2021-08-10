@@ -10,6 +10,8 @@ gem 'rails', '~> 6.1.4'
 # Bootstrap
 # gem 'bootstrap', '~> 5.0.1' # これは不要
 gem 'bootstrap-sass'
+
+gem 'bcrypt', '>= 3.1.16'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

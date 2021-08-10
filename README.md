@@ -73,4 +73,12 @@ rails db:migrate VERSION=0
 
 - `<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>`を`views/layout/application.html.erb`に入れるとエラーが出る
 - `gem 'bootstrap', '~> 5.0.1'`だとエラーが出るので、教科書通り`gem bootstrap-sass`と書いた方が良い
+- ユーザーコントローラーを作る際は、`rails generate controller Users new`を入力する
 - `<% provide(:title, "Sign up")%>`は`provide`と`(:title)`の間の空白を開けてはいけない
+-----------------  
+### Section6
+- `rails generate model User name:string email:string`を入力してUserモデルを生成
+- `rails db:migrate`で実行
+- `rails test:models`でモデルに関するテストだけを走らせることができる
+- メールアドレスを定める正規表現 = `VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i`...[正規表現おすすめサイト](http://www.rubular.com/)
+
