@@ -80,5 +80,7 @@ rails db:migrate VERSION=0
 - `rails generate model User name:string email:string`を入力してUserモデルを生成
 - `rails db:migrate`で実行
 - `rails test:models`でモデルに関するテストだけを走らせることができる
-- メールアドレスを定める正規表現 = `VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i`...[正規表現おすすめサイト](http://www.rubular.com/)
-
+- メールアドレスを定める正規表現 = `VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i`...[正規表現おすすめサイト](http://www.rubular.com/)  
+------------------  
+### Section7
+- コントローラーの慣習である「リソース名は複数形」覚えておく
