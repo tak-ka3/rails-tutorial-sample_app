@@ -11,7 +11,7 @@ class User < ApplicationRecord
         uniqueness: {case_sensitive: false} #重複は避け、大文字と小文字を区別しないという意味
     # レコードが追加された時だけに適用される
     has_secure_password
-    validates :password, presence: true, length:{ minimum:6 }
+    validates :password, presence: true, length:{ minimum:6 }, allow_nil: true
 
     # 渡された文字列のハッシュ値を返す
     def User.digest(string)

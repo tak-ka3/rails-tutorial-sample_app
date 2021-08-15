@@ -84,3 +84,7 @@ rails db:migrate VERSION=0
 ------------------  
 ### Section7
 - コントローラーの慣習である「リソース名は複数形」覚えておく
+----------------
+### Section19  
+- url('http://www.rails.co.jp/help'など)とpath('/help'など)に使い分けについて、urlはredirectの時だけ使い、それ以外はpathを使う。また
+この話に関連して、`redirect_to @user`などと書いてある時は、`redirect_to user_url(@user)`を意味する。

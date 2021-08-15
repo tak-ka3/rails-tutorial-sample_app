@@ -10,6 +10,11 @@ gem 'rails', '~> 6.1.4'
 # Bootstrap
 # gem 'bootstrap', '~> 5.0.1' # これは不要
 gem 'bootstrap-sass'
+# 実際にいそうなユーザーを作成してくれるgem
+gem 'faker', '2.18.0'
+# 下二つは、一つのページに表示するユーザーの数を決めるもの
+gem 'will_paginate', '3.3.1'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'bcrypt', '>= 3.1.16'
 # Use Puma as the app server
