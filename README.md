@@ -75,6 +75,11 @@ rails db:migrate VERSION=0
 - `gem 'bootstrap', '~> 5.0.1'`だとエラーが出るので、教科書通り`gem bootstrap-sass`と書いた方が良い
 - ユーザーコントローラーを作る際は、`rails generate controller Users new`を入力する
 - `<% provide(:title, "Sign up")%>`は`provide`と`(:title)`の間の空白を開けてはいけない
+- `<%= javascript_pack_tag 'application', 'data-turbolinks-tack': 'reload' %>`というように`javascript_include_tag`ではなく、`javascript_pack_tag`にRails6.0からは変える。
+- さらに、rails6.0からはjavascriptを読み込むときがやや厄介になっており、以下の手順を踏む必要がある。  
+1. `yarn add jquery@3.4.1 bootstrap@3.4.1`を実行して、ライブライを読み込む。
+2. `config/webpack/environment.js`を今回のようなコードにする。
+3. 最後に`app/javascript/packs/application.js`でjqueryとBootstrapをimportで読み込む。
 -----------------  
 ### Section6
 - `rails generate model User name:string email:string`を入力してUserモデルを生成
