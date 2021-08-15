@@ -79,7 +79,8 @@ rails db:migrate VERSION=0
 - さらに、rails6.0からはjavascriptを読み込むときがやや厄介になっており、以下の手順を踏む必要がある。  
 1. `yarn add jquery@3.4.1 bootstrap@3.4.1`を実行して、ライブライを読み込む。
 2. `config/webpack/environment.js`を今回のようなコードにする。
-3. 最後に`app/javascript/packs/application.js`でjqueryとBootstrapをimportで読み込む。
+3. 最後に`app/javascript/packs/application.js`でjqueryとBootstrapをimportで読み込む。  
+[参考資料](https://qiita.com/take_webengineer/items/fce014c8aeee9a0d7201)
 -----------------  
 ### Section6
 - `rails generate model User name:string email:string`を入力してUserモデルを生成
