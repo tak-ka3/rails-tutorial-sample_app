@@ -91,6 +91,23 @@ rails db:migrate VERSION=0
 ### Section7
 - コントローラーの慣習である「リソース名は複数形」覚えておく
 ----------------
-### Section19  
+### Section9  
 - url('http://www.rails.co.jp/help'など)とpath('/help'など)に使い分けについて、urlはredirectの時だけ使い、それ以外はpathを使う。また
 この話に関連して、`redirect_to @user`などと書いてある時は、`redirect_to user_url(@user)`を意味する。
+-----------------
+### Section10
+- なぜか、deleteを実行するとエラーが出る。  
+----------------
+### Section11
+- `config/routes.rb`のファイル内に`resources :hoge`と書くだけで、下のようなルートを一気に表せる。  
+```ruby
+    hoges GET /hoges(.:format)          hoges#index 
+          POST /hoges(.:format)         hoges#create 
+ new_hoge GET /hoges/new(.:format)      hoges#new 
+edit_hoge GET /hoges/:id/edit(.:format) hoges#edit 
+     hoge GET /hoges/:id(.:format)      hoges#show 
+          PATCH /hoges/:id(.:format)    hoges#update 
+          PUT /hoges/:id(.:format)      hoges#update 
+          DELETE /hoges/:id(.:format)   hoges#destroy
+```
+後に`only: [:edit]`などと続けることで、使うアクションに絞ることができる。

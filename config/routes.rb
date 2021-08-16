@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
+  resources :account_activations, only: [:edit] # 今回はeditアクションだけに絞ってる, editアクションはアカウント有効に使える特別なアクション
 end
