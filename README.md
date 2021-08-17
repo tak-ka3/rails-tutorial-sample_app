@@ -137,3 +137,4 @@ edit_password_reset GET    /password_resets/:id/edit(.:format)        password_r
 ### Section12
 - @userで始まるメソッドは、app/models/user.rb内で定義されていることが多い。
 - localで試してエラーが出ないことを確認してからpushするのが一番確実。
+- rails6.0から`@user.update_attributes(user_params)`が非推奨になったので、`@user.update(user_params)`を使うべき。
