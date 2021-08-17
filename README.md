@@ -136,3 +136,4 @@ edit_password_reset GET    /password_resets/:id/edit(.:format)        password_r
 ------------
 ### Section12
 - @userで始まるメソッドは、app/models/user.rb内で定義されていることが多い。
+- localで試してエラーが出ないことを確認してからpushするのが一番確実。
