@@ -111,3 +111,28 @@ edit_hoge GET /hoges/:id/edit(.:format) hoges#edit
           DELETE /hoges/:id(.:format)   hoges#destroy
 ```
 後に`only: [:edit]`などと続けることで、使うアクションに絞ることができる。
+
+- 今回はmigrationも変更しているので以下の操作を最後に行う。
+```bash
+heroku pg:reset:DATABASE
+heroku run rails db:migrate
+heroku run rails db:seed
+heorku restart
+```
+-----------
+### Section11
+- createメソッドはどこで呼び出される？  
+この答えは、password_resetsというルートが呼び出された(POSTメソッド)時に自動的に実行される。これは下の`rails raoutes`の結果からわかる。  
+```bash
+sample_app $ rails routes | grep password
+
+password_resets POST   /password_resets(.:format)                     password_resets#create
+new_password_reset GET    /password_resets/new(.:format)              password_resets#new
+edit_password_reset GET    /password_resets/:id/edit(.:format)        password_resets#edit
+     password_reset PATCH  /password_resets/:id(.:format)             password_resets#update
+                    PUT    /password_resets/:id(.:format)             password_resets#update
+```
+- `rails routes`でrouteをみることができる
+------------
+### Section12
+- @userで始まるメソッドは、app/models/user.rb内で定義されていることが多い。
