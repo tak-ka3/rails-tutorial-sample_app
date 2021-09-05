@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit] # 今回はeditアクションだけに絞ってる, editアクションはアカウント有効に使える特別なアクション
   resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :microposts, only: [:create, :destroy]
 end

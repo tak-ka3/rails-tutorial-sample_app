@@ -114,7 +114,7 @@ edit_hoge GET /hoges/:id/edit(.:format) hoges#edit
 
 - 今回はmigrationも変更しているので以下の操作を最後に行う。
 ```bash
-heroku pg:reset:DATABASE
+heroku pg:reset DATABASE
 heroku run rails db:migrate
 heroku run rails db:seed
 heorku restart
@@ -138,3 +138,7 @@ edit_password_reset GET    /password_resets/:id/edit(.:format)        password_r
 - @userで始まるメソッドは、app/models/user.rb内で定義されていることが多い。
 - localで試してエラーが出ないことを確認してからpushするのが一番確実。
 - rails6.0から`@user.update_attributes(user_params)`が非推奨になったので、`@user.update(user_params)`を使うべき。
+------------
+### Section13
+- 今までは、ユーザー、セッション、アカウントの有効化、パスワードのリセットという4つのリソースを見てきた。次はユーザーが投稿できるように「マイクロポスト」というリソースを追加する。
+- @micropostとmicropostsの違いは？

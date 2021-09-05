@@ -1,4 +1,6 @@
+# @userのメソッドがここで定義されている。
 class User < ApplicationRecord
+    has_many :microposts, dependent: :destroy
     attr_accessor :remember_token, :activation_token, :reset_token
     # self.email = self.email.downcaseと書いても良い
     before_save { self.email = email.downcase }
