@@ -142,3 +142,4 @@ edit_password_reset GET    /password_resets/:id/edit(.:format)        password_r
 ### Section13
 - 今までは、ユーザー、セッション、アカウントの有効化、パスワードのリセットという4つのリソースを見てきた。次はユーザーが投稿できるように「マイクロポスト」というリソースを追加する。
 - @micropostとmicropostsの違いは？
+- 13章の最後のところで、なぜかエラー←現在ここ
